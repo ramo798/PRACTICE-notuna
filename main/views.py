@@ -3,17 +3,17 @@ from django.shortcuts import redirect
 from .models import Userinfor
 from .models import Post
 from .forms import PostForm
+import random
 
 def home(request):
-    posts1 = Post.objects.filter(id = 1)
-    posts2 = Post.objects.filter(id = 2)
-    posts3 = Post.objects.filter(id = 3)
-    prof = Userinfor.objects.filter(id = 2)
+    #ログイン中のユーザーのプロフを表示
+    prof = Userinfor.objects.filter(userid = request.user)
+
+    #ログイン中のユーザーのツイートを表示
+    posts = Post.objects.filter(userids = request.user)
 
     d = {
-        'posts1': posts1,
-        'posts2': posts2,
-        'posts3': posts3,
+        'posts': posts,
         'prof': prof,
     }
     return render(request, 'main/home.html', d)
