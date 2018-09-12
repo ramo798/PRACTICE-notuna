@@ -29,8 +29,11 @@
     </script>
   </head>
   <body>
+
     <div class="outer">
-      <form action="#" method="POST">
+      <form  method="POST">{% csrf_token %}
+        {{ form.as_p }}
+
         <div class="top">
           <a href="{% url 'home'%}"><img class="back" src="{% static 'img/back.png' %}" /></a>
           <input type="image" class="submit" src="{% static 'img/submit.png' %}" alt="ツイート" />
@@ -45,6 +48,7 @@
           </div>
         </div>
       </form>
+
     </div>
   </body>
 </html>
