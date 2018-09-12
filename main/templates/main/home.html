@@ -11,7 +11,7 @@
   <body>
     <div class="outer">
       <div class="inner">
-        <div class="header"><p class="title">conless</p></div>
+        <div class="header"><p class="title">MONO</p></div>
         <p class="form">
           <a href="{% url 'tweet' %}">
 
@@ -67,7 +67,7 @@
             </div>
           </div>
         </div>
-        <div class="twe">Tweets</div>
+        <div class="twe">Monologue</div>
         <div class="middle">
           <div class="slider2">
             {% for post in posts %}
@@ -110,8 +110,6 @@
       </div>
     </div>
 
-
-
   <script src="{% static 'slick/jquery-min.js' %}"></script>
   <script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
   <script>
@@ -124,6 +122,14 @@
       cssEase: 'ease-in',
       swipeToSlide: true,
       speed: 50,
+      responsive:[
+        {
+          breakpoint: 400,
+          settings:{
+            slidesToShow: 3,
+          }
+        },
+      ]
     });
   </script>
   <script>

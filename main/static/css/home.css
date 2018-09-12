@@ -52,7 +52,7 @@ html, body{
 
 .top{
   height: 6em;
-  margin-top: 2.5em;
+  margin-top: 1.5em;
 }
 
 .user{
@@ -95,14 +95,14 @@ a:visited{
 }
 
 .twe{
-  margin: 1.8em 1.7em 0 1.28em;
-  font-size: 2em;
+  margin: 1em 1.7em 0 1.28em;
+  font-size: 1.8em;
   font-weight: bold;
   color: gray;
 }
 
 .middle{
-  margin: 0.8em 1.7em 0 1.7em;
+  margin: 1.5em 1.7em 0 1.7em;
 }
 
 .tweet{
@@ -165,13 +165,13 @@ a:visited{
 }
 
 .bottom{
-  margin: 5em 1.7em 0 1.7em;
+  margin: 4.5em 1.7em 0 1.7em;
   height: 15em;
 }
 
 .img_back{
   height: 15em;
-  width: 15em;
+  width: 10em;
   margin-right: 1em;
   overflow: hidden;
   float: left;
@@ -188,14 +188,14 @@ a:visited{
 }
 
 .bold{
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: bold;
   height: 3em;
   color: gray;
 }
 
 .uname{
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -206,4 +206,43 @@ a:visited{
 .slick-prev:before,
 .slick-next:before {
     color: gray;
+}
+
+@media screen and (max-width:600px) {
+
+  .img_back{
+    width: 7em;
+  }
+
+  .txt_in{
+    font-size: 0.9em;
+  }
+
+  .icon_mid{
+    height: 4em;
+    width: 4em;
+    margin: 1em auto auto auto;
+  }
+
+  .dat{
+    margin-top: 0.3em;
+  }
+
+  .twe{
+    margin: 1.8em 1.7em 0 1.7em;
+    font-size: 1.5em;
+  }
+
+  .bold{
+    font-size: 1.5em;
+  }
+
+  .uname{
+    font-size: 1.3em;
+  }
+
+  .proftex{
+    font-size: 0.9em;
+  }
+
 }
