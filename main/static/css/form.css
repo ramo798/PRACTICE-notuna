@@ -1,0 +1,109 @@
+html, body{
+  height: 90%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+}
+
+.outer{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  margin-top: -1.1em;
+  padding: 0px;
+}
+
+form{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.top{
+  height: 3em;
+  box-shadow: 0px 0.5px 1px gray;
+}
+
+.back{
+  height: 65%;
+  margin: 0.5em 0 1em 1.25em;
+}
+
+a:hover{
+  opacity: 0.7;
+}
+
+.submit{
+  height: 70%;
+  float: right;
+  margin: 0.5em 0.5em 1em 0;
+  outline: none;
+}
+
+.box{
+  width: 100%;
+  height: 10em;
+  display: flex;
+  align-items: center;
+}
+
+.box1{
+  height: 100%;
+  width: 3.5em;
+  justify-content: center;
+}
+
+.icon{
+  height: 2.5em;
+  width: 2.5em;
+  margin: 1em 0 1em 1em;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.en{
+  height: 2.2em;
+  width: 2.2em;
+  margin: 0 0 1em 1em;
+  border: 2px solid darkorange;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img_top{
+  width: 150%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.box2{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+textarea{
+  background: rgba(0,0,0,0.01);
+  margin: 1.2em 0.5em 0.5em 0.5em;
+  padding: auto;
+  width: 90%;
+  height: 70%;
+  resize: none;
+  border-radius: 5px;
+  border-bottom: 2px solid darkorange;
+  box-shadow: inset 0 0.5px 0.5px rgba(0,0,0,0.2);
+  outline: none;
+}

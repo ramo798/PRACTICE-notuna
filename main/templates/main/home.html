@@ -1,0 +1,158 @@
+<html lang="ja">
+  <head>
+    <title>home</title>
+    <meta charset="utf-8"/>
+	  <meta name="viewport" content="1080px,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <link href="slick/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="slick/slick.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="home.css"/>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <div class="header"><p class="title">conless</p></div>
+        <p class="form">
+          <a href="form.html">
+            <img class="back" src="img/back.png" />
+          </a>
+        </p>
+        <div class="top">
+          <div class="slider">
+            <div class="user">
+              <a href="#">
+                <div class="icon_top">
+                  <img class="img_top" src="img/beach.jpeg" />
+                </div>
+                <div class="name_top">ramo</div>
+              </a>
+            </div>
+            <div class="user">
+              <a href="#">
+                <div class="icon_top">
+                  <img class="img_top" src="img/night.jpeg" />
+                </div>
+                <div class="name_top">katasu</div>
+              </a>
+            </div>
+            <div class="user">
+              <a href="#">
+                <div class="icon_top">
+                  <img class="img_top" src="img/dol.jpg" />
+                </div>
+                <div class="name_top">yusuke</div>
+              </a>
+            </div>
+            <div class="user">
+              <a href="#">
+                <div class="icon_top">
+                  <img class="img_top" src="img/cherry.jpg" />
+                </div>
+                <div class="name_top">wanaka</div>
+              </a>
+            </div>
+            <div class="user">
+              <a href="#">
+                <div class="icon_top">
+                  <img class="img_top" src="img/yayoi.jpg" />
+                </div>
+                <div class="name_top">ike</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="twe">Tweets</div>
+        <div class="middle">
+          <div class="slider2">
+            <div class="tweet">
+              <div class="box1">
+                <div class="icon_mid"><img class="img_mid" src="img/beach.jpeg" /></div>
+                <div class="dat">1h</div>
+              </div>
+              <div class="box2">
+                <div class="txt">
+                  <div class="txt_in">
+                      ひとつめのツイート。
+                      ここに色々と書き込みます。
+                      文字数は100文字くらいに制限するとタイトでいいかも。
+                      多くても120字かな。
+                      横にスライドすると次のツイートが表示されます。
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tweet">
+              <div class="box1">
+                <div class="icon_mid"><img class="img_mid" src="img/beach.jpeg" /></div>
+                <div class="dat">2h</div>
+              </div>
+              <div class="box2">
+                <div class="txt">
+                  <div class="txt_in">
+                      ふたつめのツイート
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tweet">
+              <div class="box1">
+                <div class="icon_mid"><img class="img_mid" src="img/beach.jpeg" /></div>
+                <div class="dat">3h</div>
+              </div>
+              <div class="box2">
+                <div class="txt">
+                  <div class="txt_in">
+                      みっつめのツイート
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="img_back">
+            <img class="img_bottom" src="img/beach.jpeg" />
+          </div>
+          <div class="prof">
+            <span class="bold">Profile: </span>
+            <span class="uname">ramo3</span>
+          </div>
+          <div class="proftex">
+            ここにプロフィールが入ります。
+            つぶやきを見せるのを優先したかったので、
+            あえてプロフを下にしてみました。
+            クレジットっぽくて良いかも？
+          </div>
+      　</div>
+      </div>
+    </div>
+
+
+
+  <script src="slick/jquery-min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script>
+    $('.slider').slick({
+      slidesToShow:4,
+      centerMode: true,
+      arrows: true,
+      prevArrow:'<div class=”prev”></div>',
+      nextArrow:'<div class=”prev”></div>',
+      cssEase: 'ease-in',
+      swipeToSlide: true,
+      speed: 50,
+    });
+  </script>
+  <script>
+    $('.slider2').slick({
+      slidesToShow:1,
+      centerMode: true,
+      centerPadding: '1.5em',
+      dots: true,
+      focusOnSelect: true,
+      accesibility: true,
+      cssEase: 'linear',
+      speed: 200,
+    });
+  </script>
+  </body>
+</html>
