@@ -70,6 +70,8 @@
         <div class="twe">Tweets</div>
         <div class="middle">
           <div class="slider2">
+            {% for post in posts %}
+
             <div class="tweet">
               <div class="box1">
 
@@ -78,44 +80,15 @@
               </div>
               <div class="box2">
                 <div class="txt">
-                  {% for post1 in posts1 %}
+
                   <div class="txt_in">
-                      {{post1.posttext}}
+                      {{post.posttext}}
                   </div>
-                  {% endfor %}
+
                 </div>
               </div>
             </div>
-            <div class="tweet">
-              <div class="box1">
-                <div class="icon_mid"><img class="img_mid" src="{% static 'img/beach.jpeg' %}" /></div>
-                <div class="dat">2h</div>
-              </div>
-              <div class="box2">
-                <div class="txt">
-                  {% for post2 in posts2 %}
-                  <div class="txt_in">
-                      {{post2.posttext}}
-                  </div>
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
-            <div class="tweet">
-              <div class="box1">
-                <div class="icon_mid"><img class="img_mid" src="{% static 'img/beach.jpeg' %}" /></div>
-                <div class="dat">3h</div>
-              </div>
-              <div class="box2">
-                <div class="txt">
-                  {% for post3 in posts3 %}
-                  <div class="txt_in">
-                      {{post3.posttext}}
-                  </div>
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
         <div class="bottom">
