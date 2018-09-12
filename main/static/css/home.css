@@ -165,8 +165,8 @@ a:visited{
 }
 
 .bottom{
-  margin: 4.5em 1.7em 0 1.7em;
-  height: 15em;
+  margin: 3.5em 1.7em 0 1.7em;
+  height: 20em;
 }
 
 .img_back{
@@ -214,10 +214,6 @@ a:visited{
     width: 7em;
   }
 
-  .txt_in{
-    font-size: 0.9em;
-  }
-
   .icon_mid{
     height: 4em;
     width: 4em;
@@ -229,7 +225,7 @@ a:visited{
   }
 
   .twe{
-    margin: 1.8em 1.7em 0 1.7em;
+    margin: 1.3em 1.7em 0 1.7em;
     font-size: 1.5em;
   }
 
