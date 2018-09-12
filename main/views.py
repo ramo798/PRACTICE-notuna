@@ -15,3 +15,6 @@ def home(request):
         'prof': prof,
     }
     return render(request, 'main/home.html', d)
+
+def tweet(request):
+    return render(request, 'main/form.html', {})

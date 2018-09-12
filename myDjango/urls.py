@@ -23,5 +23,5 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
-    
+    url(r'^form/', views.tweet, name='tweet'),
 ]

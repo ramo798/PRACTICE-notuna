@@ -1,41 +1,43 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-  　　<title>conless_form</title>
-	　　<meta charset="utf-8"/>
-	　　<meta name="viewport" content="1080px,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
-  　　<link rel="stylesheet" type="text/css" href="form.css"/>
-  　　<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  　　<script type="text/javascript">
-  　　$(function(){
-      　　var countMax = 120;
-      　　$('textarea').bind('keydown keyup keypress change',function(){
-          　　var thisValueLength = $(this).val().length;
-          　　var countDown = (countMax)-(thisValueLength);
-          　　$('.count').html(countDown);
+    <title>conless_form</title>
+	  <meta charset="utf-8"/>
+	  <meta name="viewport" content="1080px,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
 
-          　　if(countDown < 0){
-            　　  $('.count').css({color:'#ff0000',fontWeight:'bold'});
-          　　} else {
-          　　    $('.count').css({color:'#000000',fontWeight:'normal'});
-        　　  }
-      　　});
-      　　$(window).load(function(){
-      　　    $('.count').html(countMax);
-      　　});
-  　　});
-  　　</script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        var countMax = 120;
+        $('textarea').bind('keydown keyup keypress change',function(){
+            var thisValueLength = $(this).val().length;
+            var countDown = (countMax)-(thisValueLength);
+            $('.count').html(countDown);
+
+            if(countDown < 0){
+                $('.count').css({color:'#ff0000',fontWeight:'bold'});
+            } else {
+                $('.count').css({color:'#000000',fontWeight:'normal'});
+            }
+        });
+        $(window).load(function(){
+            $('.count').html(countMax);
+        });
+    });
+    </script>
   </head>
   <body>
     <div class="outer">
       <form action="#" method="POST">
         <div class="top">
-          <a href="home.html"><img class="back" src="img/back.png" /></a>
-          <input type="image" class="submit" src="img/submit.png" alt="ツイート" />
+          <a href="home.html"><img class="back" src="{% static 'img/back.png' %}" /></a>
+          <input type="image" class="submit" src="{% static 'img/submit.png' %}" alt="ツイート" />
         </div>
         <div class="box">
           <div class="box1">
-            <div class="icon"><img class="img_top" src="img/beach.jpeg" /></div>
+            <div class="icon"><img class="img_top" src="{% static 'img/beach.jpeg' %}" /></div>
             <div class="en"><div class="count">0</div></div>
           </div>
           <div class="box2">
