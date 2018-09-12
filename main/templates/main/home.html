@@ -78,13 +78,11 @@
               </div>
               <div class="box2">
                 <div class="txt">
+                  {% for post1 in posts1 %}
                   <div class="txt_in">
-                      ひとつめのツイート。
-                      ここに色々と書き込みます。
-                      文字数は100文字くらいに制限するとタイトでいいかも。
-                      多くても120字かな。
-                      横にスライドすると次のツイートが表示されます。
+                      {{post1.posttext}}
                   </div>
+                  {% endfor %}
                 </div>
               </div>
             </div>
@@ -95,9 +93,11 @@
               </div>
               <div class="box2">
                 <div class="txt">
+                  {% for post2 in posts2 %}
                   <div class="txt_in">
-                      ふたつめのツイート
+                      {{post2.posttext}}
                   </div>
+                  {% endfor %}
                 </div>
               </div>
             </div>
@@ -108,9 +108,11 @@
               </div>
               <div class="box2">
                 <div class="txt">
+                  {% for post3 in posts3 %}
                   <div class="txt_in">
-                      みっつめのツイート
+                      {{post3.posttext}}
                   </div>
+                  {% endfor %}
                 </div>
               </div>
             </div>
@@ -120,17 +122,18 @@
           <div class="img_back">
             <img class="img_bottom" src="{% static 'img/beach.jpeg' %}" />
           </div>
+          {% for profa in prof %}
           <div class="prof">
             <span class="bold">Profile: </span>
-            <span class="uname">ramo3</span>
+            <span class="uname">{{profa.profname}}</span>
           </div>
+
           <div class="proftex">
-            ここにプロフィールが入ります。
-            つぶやきを見せるのを優先したかったので、
-            あえてプロフを下にしてみました。
-            クレジットっぽくて良いかも？
+            {{profa.proftext}}
           </div>
-      　</div>
+          {% endfor %}
+
+       </div>
       </div>
     </div>
 
