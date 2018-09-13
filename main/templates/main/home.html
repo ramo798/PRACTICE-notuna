@@ -19,45 +19,26 @@
           </a>
         </p>
         <div class="top">
-          <form action="#" method="GET">
-            <div class="slider">
+            <div class="slider"><!--ここからインデントが変にしちゃったごめんご 0914-->
+            {% for itirana in itiran %}
+             <form action="#" method="GET">
               <div class="user">
                 <div class="icon_top">
-                  <input type="image" class="img_top" src="{% static 'img/beach.jpeg' %}" alt="ユーザーアイコン" />
+                  <input type="image" class="img_top" src=" {{ itirana.profpic }} " alt="ユーザーアイコン" />
                 </div>
-                <div class="name_top">ramo</div>
-              </div>
-              <div class="user">
-                <div class="icon_top">
-                  <input type="image" class="img_top" src="{% static 'img/night.jpeg' %}" alt="ユーザーアイコン" />
-                </div>
-                <div class="name_top">katasu</div>
-              </div>
-              <div class="user">
-                <div class="icon_top">
-                  <input type="image" class="img_top" src="{% static 'img/dol.jpg' %}" alt="ユーザーアイコン" />
-                </div>
-                <div class="name_top">yusuke</div>
-              </div>
-              <div class="user">
-                <div class="icon_top">
-                  <input type="image" class="img_top" src="{% static 'img/cherry.jpg' %}" alt="ユーザーアイコン" />
-                </div>
-                <div class="name_top">wanaka</div>
-              </div>
-              <div class="user">
-                <div class="icon_top">
-                  <input type="image" class="img_top" src="{% static 'img/yayoi.jpg' %}" alt="ユーザーアイコン" />
-                </div>
-                <div class="name_top">ike</div>
-              </div>
+                <div class="name_top"> {{ itirana.userid }} </div>
+              </div><!--ここまでインデントが変にしちゃった 0914-->
+             </form>
+            {% endfor %}
+
+
             </div>
-          </form>
+
         </div>
         <div class="twe">Monologue</div>
         <div class="middle">
           <div class="slider2">
-            {% for post in posts %}
+            {% for post in posts %}<!--ここからendforまでのコードがforで繰り返されてる-->
 
             <div class="tweet">
               <div class="box1">
@@ -75,6 +56,7 @@
                 </div>
               </div>
             </div>
+
             {% endfor %}
           </div>
         </div>
