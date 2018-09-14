@@ -4,7 +4,7 @@ from .models import Post
 
 
 class UserinforAdmin(admin.ModelAdmin):
-    list_display = ('userid', 'profname', 'profpic', 'proftext')
+    list_display = ('userid', 'profname', 'profpic', 'proftext', 'usiusi')
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('userids', 'posttext')
