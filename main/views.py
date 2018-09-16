@@ -12,9 +12,13 @@ def home(request):
     #ログイン中のユーザーのツイートを表示
     posts = Post.objects.filter(userids = request.user)
 
+    #一覧の名前と画像用の読み込み
+    itiran = Userinfor.objects.all()
+
     d = {
         'posts': posts,
         'prof': prof,
+        'itiran': itiran,
     }
     return render(request, 'main/home.html', d)
 
