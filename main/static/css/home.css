@@ -22,7 +22,7 @@ html, body{
   align-items: center;
   justify-content: center;
   height: 3em;
-  box-shadow: 0px 1.5px 3px gray;
+  box-shadow: 0px .5px 1px darkgray;
 }
 
 .title{
@@ -36,8 +36,8 @@ html, body{
 
 .form{
   position: fixed;
-  bottom: 1.5em;
-  right: 2em;
+  bottom: 0.5em;
+  right: 1.5em;
   border-radius: 50%;
   box-shadow: 0px 3px 5px darkgray;
 }
@@ -53,21 +53,50 @@ html, body{
 
 .top{
   height: 6em;
-  margin-top: 1.5em;
+  margin: 1.5em 3em 0 3em;
+}
+
+.prev{
+  background: darkorange;
+  box-shadow: 0px 0.8px 2px darkgray;
+  border-radius: 50%;
+  color: white;
+  opacity: 0.8;
+  left: -2.5em;
+  top: 37%;
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  cursor: hand;
+  font-weight: bold;
+}
+
+.next{
+  background: darkorange;
+  box-shadow: 0px 0.8px 2px darkgray;
+  border-radius: 50%;
+  color: white;
+  opacity: 0.8;
+  position: absolute;
+  top: 37%;
+  right: -2.5em;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  cursor: hand;
+  font-weight: bold;
 }
 
 .user{
   margin-top: 0.8em;
-}
-
-a:link{
-  color: black;
-  text-decoration: none;
   outline: none;
-}
-
-a:visited{
-  color: black;
 }
 
 .icon_top{
@@ -90,6 +119,11 @@ a:visited{
   transform: translate(-50%, -50%);
 }
 
+.img_top:hover{
+  cursor: pointer;
+  cursor: hand;
+}
+
 .name_top{
   margin-top: 0.5em;
   text-align: center;
@@ -97,58 +131,44 @@ a:visited{
 }
 
 .twe{
-  margin: 1em 1.7em 0 1.28em;
-  font-size: 1.8em;
   font-weight: bold;
   color: gray;
+  margin: 1em 0 0 0.37em;
+  font-size: 1.5em;
+
 }
 
 .middle{
-  margin: 0.8em 1.7em 0 1.7em;
+  margin: 0.8em 0 0 0;
 }
 
 .tweet{
-  height: 15em;
-  margin:0.1em;
-  box-shadow: 0.2px 0.8px 6px darkgray;
+  height: 18em;
+  box-shadow: 0px 0.2px 2px darkgray;
   outline: none;
+  margin: 0.1em;
+  overflow-y: scroll;
+}
+
+.tweet::-webkit-scrollbar{
+  display: none;
 }
 
 .box1{
-  width: 30%;
-  height: 100%;
-  float: left;
-}
-
-.box2{
-  width: 70%;
-  height: 100%;
-  float: right;
+  height: 20%;
+  margin-top: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.txt{
-  width: 90%;
-  height: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.txt_in{
-  width: 90%;
-  height: 90%;
 }
 
 .icon_mid{
-  height: 5em;
-  width: 5em;
+  height: 3em;
+  width: 3em;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
-  margin: 1em auto auto auto;
+  margin-top: 1em;
+  margin-left: 1em;
 }
 
 .img_mid{
@@ -161,9 +181,15 @@ a:visited{
   transform: translate(-50%, -50%);
 }
 
-.dat{
-  text-align: center;
-  margin-top: 0.5em;
+.twe_name, .dat{
+  margin-top: 1em;
+  margin-left: 0.5em;
+  color: gray;
+  font-size: 1.2em;
+}
+
+.txt{
+  padding: 1.5em 1.5em 1.5em 1.5em;
 }
 
 .bottom{
@@ -189,7 +215,7 @@ a:visited{
 }
 
 .bold{
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: bold;
   height: 3em;
   color: gray;
@@ -206,40 +232,5 @@ a:visited{
 
 .slick-prev:before,
 .slick-next:before {
-    color: darkorange;
-}
-
-@media screen and (max-width:600px) {
-
-  .img_back{
-    width: 7em;
-  }
-
-  .icon_mid{
-    height: 4em;
-    width: 4em;
-    margin: 1em auto auto auto;
-  }
-
-  .dat{
-    margin-top: 0.3em;
-  }
-
-  .twe{
-    margin: 1.3em 1.7em 0 1.7em;
-    font-size: 1.5em;
-  }
-
-  .bold{
-    font-size: 1.5em;
-  }
-
-  .uname{
-    font-size: 1.3em;
-  }
-
-  .proftex{
-    font-size: 0.9em;
-  }
-
+    color: black;
 }
