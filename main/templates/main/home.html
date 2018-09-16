@@ -61,10 +61,12 @@
           </div>
         </div>
         <div class="bottom">
-          <div class="img_back">
-            <img class="img_bottom" src="{% static 'img/beach.jpeg' %}" />
-          </div>
           {% for profa in prof %}
+          <div class="img_back">
+            <img class="img_bottom" src="{{ itirana.profpic }}" />
+          </div>
+
+
           <div class="prof">
             <span class="bold">Profile: </span>
             <span class="uname">{{profa.profname}}</span>
