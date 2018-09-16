@@ -11,14 +11,17 @@
   <body>
     <div class="outer">
       <div class="inner">
+
         <div class="header"><p class="title">MONO</p></div>
         <p class="form">
           <a href="{% url 'tweet' %}">
-
             <img class="back" src="{% static 'img/pen.png' %}" />
           </a>
         </p>
+
         <div class="top">
+
+
             <div class="slider"><!--ここからインデントが変にしちゃったごめんご 0914-->
             {% for itirana in itiran %}
              <form action="#" method="GET">
@@ -34,7 +37,9 @@
 
             </div>
 
+
         </div>
+
         <div class="twe">Monologue</div>
         <div class="middle">
           <div class="slider2">
@@ -45,15 +50,16 @@
                 {% for profa in prof %}
                 <div class="icon_mid"><img class="img_mid" src="{{ profa.profpic }}" /></div>
                 {% endfor %}
+
+                <div class="twe_name"> {{profa.profname}} <!--ここに名前が入ります--> </div>
+
                 <div class="dat">1h</div>
               </div>
               <div class="box2">
                 <div class="txt">
-
                   <div class="txt_in">
-                      {{post.posttext}}
+                    {{post.posttext}}
                   </div>
-
                 </div>
               </div>
             </div>
@@ -61,24 +67,25 @@
             {% endfor %}
           </div>
         </div>
+
         <div class="bottom">
           {% for profa in prof %}
+
           <div class="img_back">
             <img class="img_bottom" src="{{ profa.profpic }}" />
           </div>
-
 
           <div class="prof">
             <span class="bold">Profile: </span>
             <span class="uname">{{profa.profname}}</span>
           </div>
-
           <div class="proftex">
             {{profa.proftext}}
           </div>
-          {% endfor %}
 
+          {% endfor %}
        </div>
+
       </div>
     </div>
 
@@ -87,10 +94,10 @@
   <script>
     $('.slider').slick({
       slidesToShow:4,
-      centerMode: true,
+      centerMode: false,
       arrows: true,
-      prevArrow:'<div class=”prev”></div>',
-      nextArrow:'<div class=”prev”></div>',
+      prevArrow:'<div class=”prev”>←</div>',
+      nextArrow:'<div class=”prev”>→</div>',
       cssEase: 'ease-in',
       swipeToSlide: true,
       speed: 50,
@@ -108,12 +115,13 @@
     $('.slider2').slick({
       slidesToShow:1,
       centerMode: true,
-      centerPadding: '1.5em',
+      centerPadding: '1.2em',
       dots: true,
+      arrows: false,
       focusOnSelect: true,
       accesibility: true,
       cssEase: 'linear',
-      speed: 200,
+      speed: 100,
     });
   </script>
   </body>
