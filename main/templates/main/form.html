@@ -31,9 +31,10 @@
   <body>
 
     <div class="outer">
-      <form  method="POST">{% csrf_token %}
-        {{ form.as_p }}
 
+
+      <!-- ################################################## -->
+      <form  method="POST">{% csrf_token %}
         <div class="top">
           <a href="{% url 'home'%}"><img class="back" src="{% static 'img/back.png' %}" /></a>
           <input type="image" class="submit" src="{% static 'img/submit.png' %}" alt="ツイート" />
@@ -43,11 +44,17 @@
             <div class="icon"><img class="img_top" src="{% static 'img/beach.jpeg' %}" /></div>
             <div class="en"><div class="count">0</div></div>
           </div>
+          {% for field in form %}
           <div class="box2">
-            <textarea name="tex" cols="10" rows="5" placeholder="ここになんか書こう" required></textarea>
+            <!--<textarea name="tex" cols="10" rows="5" placeholder="ここになんか書こう" required></textarea>-->
+            {{ field }}
           </div>
+          {% endfor %}
+
         </div>
       </form>
+      <!-- ################################################## -->
+
 
     </div>
   </body>
