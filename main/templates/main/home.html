@@ -27,7 +27,7 @@
              <form action="#" method="GET">
               <div class="user">
                 <div class="icon_top">
-                  <input type="image" class="img_top" src="{{ itirana.profpic }}" alt="ユーザーアイコン" />
+                  <button onclick="submit();"><img class="img_top" src="{{ itirana.profpic }}" alt="ユーザーアイコン" /></button>
                 </div>
                 <div class="name_top"> {{ itirana.userid }} </div>
               </div><!--ここまでインデントが変にしちゃった 0914-->
@@ -47,11 +47,11 @@
 
             <div class="tweet">
               <div class="box1">
+
                 {% for profa in prof %}
                 <div class="icon_mid"><img class="img_mid" src="{{ profa.profpic }}" /></div>
-                {% endfor %}
-
                 <div class="twe_name"> {{profa.profname}} <!--ここに名前が入ります--> </div>
+                {% endfor %}
 
                 <div class="dat">1h</div>
               </div>
