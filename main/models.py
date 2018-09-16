@@ -4,7 +4,8 @@ from PIL import Image
 class Userinfor(models.Model):
     userid = models.CharField(max_length=20)
     profname = models.CharField(max_length=20)
-    profpic = models.ImageField(upload_to="image/", blank = True)
+    profpicup = models.ImageField(upload_to='images/', blank = True)
+    profpic = models.CharField(max_length=100, blank = True)
     proftext = models.CharField(max_length=100)
     usiusi = models.CharField(max_length=20, blank = True)
 
