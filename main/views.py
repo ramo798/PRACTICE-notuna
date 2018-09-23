@@ -35,3 +35,21 @@ def tweet(request):
         form = PostForm()
 
     return render(request, 'main/form.html', {'form': form})
+
+def namaeget(request):
+    use = request.GET.get('usename')
+    #ログイン中のユーザーのプロフを表示
+    prof = Userinfor.objects.filter(userid = use)
+
+    #ログイン中のユーザーのツイートを表示
+    posts = Post.objects.filter(userids = use)
+
+    #一覧の名前と画像用の読み込み
+    itiran = Userinfor.objects.all()
+
+    d = {
+        'posts': posts,
+        'prof': prof,
+        'itiran': itiran,
+    }
+    return render(request, 'main/home.html', d)

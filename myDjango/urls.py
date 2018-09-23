@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
     url(r'^form/', views.tweet, name='tweet'),
+    url(r'^usename/$', views.namaeget, name='namaeget'),
     #url(r'^media/(?P<path>.*)$','django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 
 ]
