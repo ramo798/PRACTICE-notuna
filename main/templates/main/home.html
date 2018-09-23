@@ -24,10 +24,10 @@
 
             <div class="slider"><!--ここからインデントが変にしちゃったごめんご 0914-->
             {% for itirana in itiran %}
-             <form action="#" method="GET">
+             <form action="{% url 'namaeget' %}" method="GET">
               <div class="user">
                 <div class="icon_top">
-                  <button onclick="submit();"><img class="img_top" src="{{ itirana.profpic }}" alt="ユーザーアイコン" /></button>
+                  <button onclick="submit();"><input type="hidden" value="{{ itirana.userid }}" name="usename"><img class="img_top" src="{{ itirana.profpic }}" alt="ユーザーアイコン" /></button>
                 </div>
                 <div class="name_top"> {{ itirana.userid }} </div>
               </div><!--ここまでインデントが変にしちゃった 0914-->
